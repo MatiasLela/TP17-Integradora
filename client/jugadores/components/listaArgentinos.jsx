@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList} from 'react-native';
 import axios from 'axios';
 
-const ListaJugadores = ({ navigation }) => {
+const ListaArgentinos = ({ navigation }) => {
     const [jugadores, setJugadores] = useState([]);
 
     useEffect(() => {
@@ -41,4 +41,4 @@ const ListaJugadores = ({ navigation }) => {
     );
 };
 
-export default ListaJugadores;
+export default ListaArgentinos;

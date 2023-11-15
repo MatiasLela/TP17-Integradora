@@ -5,7 +5,7 @@ import HomePage from './components/HomePage';
 import ListaJugadores from './components/listaJugadores';
 import ListaArgentinos from './components/listaArgentinos';
 import ListaPesos from './components/listaPesos';
-import ListaAltura from './components/listaAltura';
+import JugadorAlto from './components/JugadorAlto';
 const Stack = createNativeStackNavigator();
 
 const App = () => {
@@ -16,7 +16,7 @@ const App = () => {
         <Stack.Screen name="Lista" component={ListaJugadores} />
         <Stack.Screen name="Nacionalidad" component={ListaArgentinos} />
         <Stack.Screen name="Peso" component={ListaPesos} />
-        <Stack.Screen name="Altura" component={ListaAltura} />
+        <Stack.Screen name="Altura" component={JugadorAlto} />
       </Stack.Navigator>
     </NavigationContainer>
   );

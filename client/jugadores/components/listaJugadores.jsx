@@ -33,7 +33,7 @@ const ListaJugadores = ({ navigation }) => {
                         <Text>FC: {item.faltas_cometidas}</Text>
                         <Text>FS: {item.faltas_sufridas}</Text>
                         <Text>TA: {item.tarjetas_amarillas}</Text>
-                        <Text>TR: {item.tarjetas_rojas}</Text>
+                        <Text>TR: {item.tarjetas_rojas}{"\n"}</Text>
                     </View>
                 )}
             />

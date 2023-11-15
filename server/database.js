@@ -26,12 +26,12 @@ export async function getJugadoresById(id_jugador) {
 }
 
 export async function getJugadoresArgentinos() {
-    const [row] = await pool.query("SELECT * FROM jugadores WHERE nacionalidad = ?", ['Argentina']);
+    const [row] = await pool.query("SELECT * FROM jugadores WHERE nacionalidad = ?", ['Argentino']);
     return row;
 }
 
 export async function getJugadoresPorPeso() {
-    const [rows] = await pool.query("SELECT * FROM jugadores WHERE peso >= ? AND peso <= ?", [75, 80]);
+    const [rows] = await pool.query("SELECT * FROM jugadores WHERE peso BETWEEN 75 AND 80");
     return rows;
 }
 

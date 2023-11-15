@@ -54,7 +54,7 @@ app.get('/jugadores/peso', async (req, res) => {
     }
 });
 
-app.get('/jugador/mas-alto', async (req, res) => {
+app.get('/jugador/alto', async (req, res) => {
     try {
         const respuesta = await getJugadorMasAlto();
         if (!respuesta) {
