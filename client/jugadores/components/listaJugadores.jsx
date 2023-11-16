@@ -7,7 +7,7 @@ const ListaJugadores = ({ navigation }) => {
     const [jugadores, setJugadores] = useState([]);
 
     useEffect(() => {
-        axios.get('http://192.168.1.45:8080/')
+        axios.get('http://localhost:8080/')
             .then(response => setJugadores(response.data))
             .catch(error => console.error(error));
     }, []);
