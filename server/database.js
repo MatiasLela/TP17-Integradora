@@ -40,13 +40,13 @@ export async function getJugadorMasAlto() {
     return rows[0];
 }
 
-export async function insertarRegistro(nombre, posicion, edad, estatura, peso, nacionalidad, apariciones, apareciones_sustituto, atajadas, goles_concedidos, asistencias, faltas_cometidas, faltas_sufridas, tarjetas_amarillas, tarjetas_rojas) {
-    const [row] = await pool.query("INSERT INTO jugadores VALUES (nombre, posicion, edad, estatura, peso, nacionalidad, apariciones, apariciones_sustituto, atajadas, goles_concedidos, asistencias, faltas_cometidas, faltas_sufridas, tarjetas_amarillas, tarjetas_rojas) = (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", [nombre, posicion, edad, estatura, peso, nacionalidad, apariciones, apareciones_sustituto, atajadas, goles_concedidos, asistencias, faltas_cometidas, faltas_sufridas, tarjetas_amarillas, tarjetas_rojas]);    
+export async function insertarRegistro(nombre, posicion, edad, estatura, peso, nacionalidad, apariciones, apariciones_sustituto, atajadas, goles_concedidos, asistencias, faltas_cometidas, faltas_sufridas, tarjetas_amarillas, tarjetas_rojas) {
+    const [row] = await pool.query("INSERT INTO jugadores (nombre, posicion, edad, estatura, peso, nacionalidad, apariciones, apariciones_sustituto, atajadas, goles_concedidos, asistencias, faltas_cometidas, faltas_sufridas, tarjetas_amarillas, tarjetas_rojas) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", [nombre, posicion, edad, estatura, peso, nacionalidad, apariciones, apariciones_sustituto, atajadas, goles_concedidos, asistencias, faltas_cometidas, faltas_sufridas, tarjetas_amarillas, tarjetas_rojas]);    
     return row;
 }
 
-export async function actualizarJugadorById(id_jugador, nombre, posicion, edad, estatura, peso, nacionalidad, apariciones, apareciones_sustituto, atajadas, goles_concedidos, asistencias, faltas_cometidas, faltas_sufridas, tarjetas_amarillas, tarjetas_rojas) {
-    const [row] = await pool.query("UPDATE jugadores SET nombre = ?, posicion = ?, edad = ?, estatura = ?, peso = ?, nacionalidad = ?, apariciones = ?, apariciones_sustituto = ?, atajadas = ?, goles_concecidos = ?, asistencias = ?, faltas_cometidas = ?, faltas_sufridas = ?, tarjetas_amarillas = ?, tarjetas_rojas = ? WHERE id_jugador = ?", [nombre, posicion, edad, estatura, peso, nacionalidad, apariciones, apareciones_sustituto, atajadas, goles_concedidos, asistencias, faltas_cometidas, faltas_sufridas, tarjetas_amarillas, tarjetas_rojas, id_jugador]);    
+export async function actualizarJugadorById(id_jugador, nombre, posicion, edad, estatura, peso, nacionalidad, apariciones, apariciones_sustituto, atajadas, goles_concedidos, asistencias, faltas_cometidas, faltas_sufridas, tarjetas_amarillas, tarjetas_rojas) {
+    const [row] = await pool.query("UPDATE jugadores SET nombre = ?, posicion = ?, edad = ?, estatura = ?, peso = ?, nacionalidad = ?, apariciones = ?, apariciones_sustituto = ?, atajadas = ?, goles_concecidos = ?, asistencias = ?, faltas_cometidas = ?, faltas_sufridas = ?, tarjetas_amarillas = ?, tarjetas_rojas = ? WHERE id_jugador = ?", [nombre, posicion, edad, estatura, peso, nacionalidad, apariciones, apariciones_sustituto, atajadas, goles_concedidos, asistencias, faltas_cometidas, faltas_sufridas, tarjetas_amarillas, tarjetas_rojas, id_jugador]);    
     return row;
 }
 
