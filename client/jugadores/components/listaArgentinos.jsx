@@ -7,7 +7,7 @@ const ListaArgentinos = ({ navigation }) => {
     const [jugadores, setJugadores] = useState([]);
 
     useEffect(() => {
-        axios.get('http://192.168.1.45:8080/jugadores/argentinos')
+        axios.get('http://localhost:8080/jugadores/argentinos')
             .then(response => setJugadores(response.data))
             .catch(error => console.error(error));
     }, []);
