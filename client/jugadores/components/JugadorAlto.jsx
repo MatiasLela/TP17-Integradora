@@ -9,7 +9,7 @@ const JugadorAlto = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://192.168.1.45:8080/jugador/alto');
+                const response = await axios.get('http://localhost:8080/jugador/alto');
                 setJugadores(response.data);
             } catch (error) {
                 console.error('Error al obtener datos:', error);
