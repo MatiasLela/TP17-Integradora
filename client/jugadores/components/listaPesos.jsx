@@ -7,7 +7,7 @@ const ListaPesos = ({ navigation }) => {
     const [jugadores, setJugadores] = useState([]);
 
     useEffect(() => {
-        axios.get('http://192.168.1.45:8080/jugadores/peso')
+        axios.get('http://localhost:8080/jugadores/peso')
             .then(response => setJugadores(response.data))
             .catch(error => console.error(error));
     }, []);
